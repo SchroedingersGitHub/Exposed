@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+    mysql:
+        platform: linux/x86_64
+        container_name: mysql8
+        image: "mysql:8.0"
+        network_mode: "bridge"
+        environment:
+            MYSQL_ROOT_PASSWORD: "yes"
+            MYSQL_DATABASE: 'testdb'
+        ports:
+            - "3306:3306"
